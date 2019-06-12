@@ -46,7 +46,7 @@ public class ApiController extends ContactController
         }
         repository.save(contact);
 
-        return "TO CHECK";
+        return "OK";
     }
 
     @PostMapping(value = "/contact/{id}", consumes = {MediaType.APPLICATION_XML_VALUE})
@@ -57,6 +57,6 @@ public class ApiController extends ContactController
         }
         repository.save(contact);
 
-        return "TO CHECK";
+        return "OK";
     }
 }
