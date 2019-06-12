@@ -1,0 +1,36 @@
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<body>
+<form action="#" th:action="@{/contact/add}" th:object="${contactForm}" method="post">
+    <table>
+        <tr>
+            <td>Prénom:</td>
+            <td><input type="text" th:field="*{firstname}" /></td>
+            <td th:if="${#fields.hasErrors('firstname')}" th:errors="*{firstname}">First Name Error</td>
+        </tr>
+        <tr>
+            <td>Nom:</td>
+            <td><input type="text" th:field="*{lastname}" /></td>
+            <td th:if="${#fields.hasErrors('lastname')}" th:errors="*{lastname}">Last Name Error</td>
+        </tr>
+        <tr>
+            <td>Adresse:</td>
+            <td><input type="text" th:field="*{address}" /></td>
+            <td th:if="${#fields.hasErrors('address')}" th:errors="*{address}">Address Error</td>
+        </tr>
+        <tr>
+            <td>Numéro de téléphone:</td>
+            <td><input type="text" th:field="*{phoneNumber}" /></td>
+            <td th:if="${#fields.hasErrors('phoneNumber')}" th:errors="*{phoneNumber}">Telephone Number Error</td>
+        </tr>
+        <tr>
+            <td>E-Mail:</td>
+            <td><input type="text" th:field="*{email}" /></td>
+            <td th:if="${#fields.hasErrors('email')}" th:errors="*{email}">Mail Error</td>
+        </tr>
+        <tr>
+            <td><button type="submit">Ajouter le contact</button></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
